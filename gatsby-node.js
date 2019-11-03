@@ -12,14 +12,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           }
         }
       }
-      allShopifyCollection {
-        edges {
-          node {
-            handle
-            id
-          }
-        }
-      }
       allPrismicBlogpost {
         edges {
           node {
@@ -64,18 +56,6 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     createPage({
       path: `/product/${node.handle}`,
       component: productPageTemplate,
-      context: {
-        id: node.id,
-        handle: node.handle
-      }
-    });
-  });
-
-  // Create Collection pages
-  pages.data.allShopifyCollection.edges.forEach(({ node }) => {
-    createPage({
-      path: `/${node.handle}`,
-      component: collectionPageTemplate,
       context: {
         id: node.id,
         handle: node.handle
