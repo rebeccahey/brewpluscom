@@ -107,13 +107,13 @@ const Footer = () => (
       <Section>
         <Title>Legal</Title>
         <Box>
-          <a href="/">Privacy Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
         </Box>
         <Box>
-          <a href="/">Terms & Conditions</a>
+          <a href="/terms-and-conditions">Terms & Conditions</a>
         </Box>
         <Box>
-          <a href="/">Return Policy</a>
+          <a href="/return-policy">Return Policy</a>
         </Box>
       </Section>
     </Flex>
