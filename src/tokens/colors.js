@@ -11,7 +11,8 @@ export default {
   brand: '#262626',
   lilac: `#8c65b3`,
   grey: '#515151',
-  accent: `#AE9E85`,
+  buttongrey: '#707070',
+  accent: `#D8392F`,
   error: `#ec1818`,
   lemon: `#F7F7F7`,
   zzz: '#ECBAFF'

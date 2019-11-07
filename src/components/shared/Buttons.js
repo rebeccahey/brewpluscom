@@ -23,7 +23,7 @@ export const ButtonBase = styled(`button`)`
   transition: 0.5s;
 
   :focus {
-    box-shadow: 0 0 0 3px ${themeGet('colors.accent')};
+    box-shadow: 0 0 0 0px ${themeGet('colors.grey')};
     outline: 0;
     transition: box-shadow 0.15s ease-in-out;
   }
@@ -38,7 +38,7 @@ export const ButtonBase = styled(`button`)`
   @media (hover: hover) {
     &:hover {
       svg {
-        fill: ${themeGet('colors.accent')};
+        fill: ${themeGet('colors.grey')};
       }
     }
   }
@@ -111,7 +111,8 @@ export const PrimaryButton = styled(Button)`
 
   @media (hover: hover) {
     &:hover {
-      background: ${themeGet('colors.accent')};
+      background: ${themeGet('colors.lightest')};
+      color: ${themeGet('colors.buttongrey')};
     }
   }
 `;
