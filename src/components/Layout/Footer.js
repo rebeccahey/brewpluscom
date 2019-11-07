@@ -97,10 +97,7 @@ const Footer = () => (
       <Section>
         <Title>About</Title>
         <Box>
-          <a href="/">About Us</a>
-        </Box>
-        <Box>
-          <a href="/">FAQ</a>
+          <a href="/about-us">About Us</a>
         </Box>
       </Section>
 
