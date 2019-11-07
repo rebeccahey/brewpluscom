@@ -40,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `facultybrewing`
+        username: `brewpluscom`
       }
     },
     `gatsby-transformer-sharp`,
