@@ -4,7 +4,7 @@ import SEO from '../components/shared/SEO';
 
 const AboutUsPage = () => (
   <>
-  <SEO title="Made by Brewers for Brewers" />
+  <SEO title="Tanks, hygienic fittings and brewing equipment" />
   <h1 css={{'@media (min-width: 100px)': {paddingLeft: "70px",
               paddingRight: "70px"}}}>About BrewPlus.com</h1>
   <p css={{'@media (min-width: 100px)': {paddingLeft: "70px",
