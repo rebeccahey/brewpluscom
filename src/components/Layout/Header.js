@@ -73,7 +73,7 @@ const Header = ({ menuStatus, toggleMenu, siteTitle, ...props }) => {
         width={28}
         rotate={0}
         height={18}
-        color="#5F0082"
+        color="#515151"
         isOpen={menuStatus === 'open'}
         strokeWidth={3}
         borderRadius={1}
