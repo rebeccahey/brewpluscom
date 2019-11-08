@@ -9,7 +9,7 @@ export const ButtonBase = styled(`button`)`
   align-items: center;
   background: ${props =>
     props.inverse ? themeGet('colors.brand') : themeGet('colors.lightest')};
-  border: 0px solid
+  border: 2px solid
     ${props =>
       props.inverse ? themeGet('colors.brandLight') : themeGet('colors.brand')};
   border-radius: ${themeGet('radii.2')}px;
