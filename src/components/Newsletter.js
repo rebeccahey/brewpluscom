@@ -36,16 +36,11 @@ const Newsletter = () => (
     </Box>
     <Flex flexDirection={['column', 'column', 'row']}>
     <form name="contact" method="POST" data-netlify="true">
-<p>
-  <label>Your Email: <input type="email" name="email" /></label>
-</p>
-<p>
-  <button type="SignUpButton">Sign Up</button>
-</p>
-</form>
+    <p>  <EmailInput name="email" placeholder="Email address" /></p>
+<p>      <SignUpButton>Sign Up</SignUpButton></p>
+      </form>
     </Flex>
   </Flex>
-
 );
 
 export default Newsletter;
