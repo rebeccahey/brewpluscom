@@ -91,6 +91,7 @@ const SideBar = ({ status }) => {
       <CollectionsMenu />
       <PageLink to="/">Home</PageLink>
       <PageLink to="/about-us">Our Story</PageLink>
+      <PageLink to="/contact-us">Contact Us</PageLink>
       <PageLink to="/blog">Blog</PageLink>
     </SideBarRoot>
   );
