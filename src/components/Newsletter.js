@@ -34,14 +34,15 @@ const Newsletter = () => (
       </Text>
       <Text textAlign="center">Get the latest brewing information direct to your inbox.</Text>
     </Box>
-    <Flex flexDirection={['column', 'column', 'row']}>
+
     <form name="contact" action="/" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="bot-field" />
+      <Flex flexDirection={['column', 'column', 'row']}>
     <EmailInput name="email" placeholder="Email address" />
     <SignUpButton>Sign Up</SignUpButton>
-    </form>
     </Flex>
+    </form>
   </Flex>
 );
 
