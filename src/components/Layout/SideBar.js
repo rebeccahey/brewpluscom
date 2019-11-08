@@ -90,8 +90,7 @@ const SideBar = ({ status }) => {
       <Caption>Brewery Equipment</Caption>
       <CollectionsMenu />
       <PageLink to="/">Home</PageLink>
-      <PageLink to="/">FAQ</PageLink>
-      <PageLink to="/about-us">About</PageLink>
+      <PageLink to="/about-us">Our Story</PageLink>
       <PageLink to="/blog">Blog</PageLink>
     </SideBarRoot>
   );

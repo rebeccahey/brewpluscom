@@ -90,14 +90,14 @@ const Footer = () => (
       <Section>
         <Title>Customer care</Title>
         <Box>
-          <a href="/contact-us">Contact support</a>
+          <a href="/contact-us">Contact Support</a>
         </Box>
       </Section>
 
       <Section>
-        <Title>About</Title>
+        <Title>BrewPlus</Title>
         <Box>
-          <a href="/about-us">About Us</a>
+          <a href="/about-us">Our Story</a>
         </Box>
       </Section>
 

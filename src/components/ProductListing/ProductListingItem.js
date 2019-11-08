@@ -122,7 +122,7 @@ const ProductListingItem = props => {
             <span>USD</span> {price}
           </Price>
           <Button inverse>
-            View Details
+            Shop Now
           </Button>
         </Flex>
       </Item>

@@ -35,10 +35,17 @@ const Newsletter = () => (
       <Text textAlign="center">Get the latest brewing information direct to your inbox.</Text>
     </Box>
     <Flex flexDirection={['column', 'column', 'row']}>
-      <EmailInput name="email" placeholder="Email address" />
-      <SignUpButton>Sign Up</SignUpButton>
+    <form name="contact" method="POST" data-netlify="true">
+<p>
+  <label>Your Email: <input type="email" name="email" /></label>
+</p>
+<p>
+  <button type="SignUpButton">Sign Up</button>
+</p>
+</form>
     </Flex>
   </Flex>
+
 );
 
 export default Newsletter;
