@@ -218,7 +218,7 @@ class Layout extends Component {
                   <Viewport>
                     <Cart status={cartStatus} toggle={toggleCart} />
                     <Text
-                      bg="light"
+                      bg="#F2F2F2"
                       py={3}
                       textAlign="center"
                       fontSize={12}

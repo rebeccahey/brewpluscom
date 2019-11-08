@@ -68,7 +68,7 @@ const ItemsNumber = styled(`span`)`
   align-items: center;
   background: ${themeGet('colors.lemon')};
   border-radius: 50%;
-  color: ${themeGet('colors.brandDark')};
+  color: ${themeGet('colors.red')};
   display: flex;
   font-size: 1.3rem;
   font-weight: bold;
@@ -110,7 +110,7 @@ const CartToggle = styled(Button)`
   }
 
   .open & {
-    background: ${themeGet('colors.lilac')};
+    background: ${themeGet('colors.red')};
     color: ${themeGet('colors.lightest')};
     transform: translateX(0);
   }
@@ -162,7 +162,7 @@ const Cost = styled(Flex)`
   }
 
   strong {
-    color: ${themeGet('colors.lilac')};
+    color: ${themeGet('colors.text')};
     flex-basis: 40%;
     text-align: right;
   }
@@ -170,7 +170,7 @@ const Cost = styled(Flex)`
 
 const Total = styled(Cost)`
   border-top: 1px solid ${themeGet('colors.brandBright')};
-  color: ${themeGet('colors.brandDark')};
+  color: ${themeGet('colors.text')};
   margin-top: 8px;
   padding-top: 12px;
 

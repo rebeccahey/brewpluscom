@@ -87,11 +87,11 @@ const SideBar = ({ status }) => {
 
   return (
     <SideBarRoot className={className}>
-      <Caption>Collections</Caption>
+      <Caption>Brewery Equipment</Caption>
       <CollectionsMenu />
       <PageLink to="/">Home</PageLink>
       <PageLink to="/">FAQ</PageLink>
-      <PageLink to="/">About</PageLink>
+      <PageLink to="/about-us">About</PageLink>
       <PageLink to="/blog">Blog</PageLink>
     </SideBarRoot>
   );

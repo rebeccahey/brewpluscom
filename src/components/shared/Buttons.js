@@ -9,7 +9,7 @@ export const ButtonBase = styled(`button`)`
   align-items: center;
   background: ${props =>
     props.inverse ? themeGet('colors.brand') : themeGet('colors.lightest')};
-  border: 1px solid
+  border: 0px solid
     ${props =>
       props.inverse ? themeGet('colors.brandLight') : themeGet('colors.brand')};
   border-radius: ${themeGet('radii.2')}px;
@@ -19,7 +19,7 @@ export const ButtonBase = styled(`button`)`
   display: inline-flex;
   font-size: 1.1rem;
   justify-content: center;
-  padding: 0.5em 0.75rem;
+  padding: 0.75em 0.75rem;
   transition: 0.5s;
 
   :focus {
@@ -34,12 +34,6 @@ export const ButtonBase = styled(`button`)`
     margin-right: ${props => (props.iconOnLeft ? '0.5em' : 0)};
     width: 1.1em;
   }
-
-  @media (hover: hover) {
-    &:hover {
-      svg {
-        fill: ${themeGet('colors.grey')};
-      }
     }
   }
 `;
@@ -111,8 +105,8 @@ export const PrimaryButton = styled(Button)`
 
   @media (hover: hover) {
     &:hover {
-      background: ${themeGet('colors.lightest')};
-      color: ${themeGet('colors.buttongrey')};
+      background: ${themeGet('colors.buttongrey')};
+      color: ${themeGet('colors.lightest')};
     }
   }
 `;

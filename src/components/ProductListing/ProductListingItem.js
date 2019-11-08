@@ -86,7 +86,7 @@ const Price = styled(`div`)`
   letter-spacing: -0.02em;
 
   span {
-    color: ${props => props.theme.colors.textLight};
+    color: ${props => props.theme.colors.price};
   }
 `;
 
@@ -122,7 +122,7 @@ const ProductListingItem = props => {
             <span>USD</span> {price}
           </Price>
           <Button inverse>
-            Add <MdShoppingCart />
+            View Details
           </Button>
         </Flex>
       </Item>
