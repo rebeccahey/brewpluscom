@@ -232,7 +232,7 @@ class Layout extends Component {
                         {children}
                       </Box>
                     </Flex>
-                  
+
                     <Newsletter />
                     <Footer />
                   </Viewport>
