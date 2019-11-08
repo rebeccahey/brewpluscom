@@ -35,15 +35,16 @@ const Newsletter = () => (
       <Text textAlign="center">Get the latest brewing information direct to your inbox.</Text>
     </Box>
     <Flex flexDirection={['column', 'column', 'row']}>
-    <form name="contact" method="POST" data-netlify="true">
-<p>
-  <label>Your Email: <input type="email" name="email" /></label>
-</p>
-<p>
-  <button type="submit">Send</button>
-</p>
-</form>
-
+    <form name="contact" action="/" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="bot-field" />
+    <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+    </p>
+    <p>
+    <button type="submit">Send</button>
+    </p>
+    </form>
     </Flex>
   </Flex>
 );
