@@ -24,8 +24,9 @@ const ProductPage = ({ product }) => {
         </Carousel>
       </Flex>
       <Box width={1 / 2} px={4}>
-        <ProductSpecs title={title} description={descriptionHtml} isHtml />
+        <ProductSpecs title={title} />
         <ProductForm id={product.id} variants={product.variants} />
+        <ProductSpecs description={descriptionHtml} isHtml />
       </Box>
     </Flex>
   );
