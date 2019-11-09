@@ -119,7 +119,7 @@ const ProductListingItem = props => {
         <Description>{trimString(description, DESCRIPTION_LIMIT)}</Description>
         <Flex mt={3} justifyContent="space-between" alignItems="center">
           <Price>
-            <span>USD</span> {price}
+            <span>GBP</span> {price}
           </Price>
           <Button inverse>
             Shop Now
