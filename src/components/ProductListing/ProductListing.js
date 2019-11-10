@@ -21,7 +21,10 @@ export default ProductListing;
 
 const queryListProducts = graphql`
   query ProductListingQuery {
-    products: allShopifyProduct(sort: { fields: [publishedAt], order: ASC }) {
+    products: allShopifyProduct(
+      sort: { fields: [publishedAt], order: ASC }
+      filter: { tags: { eq: "popular" } }
+    ) {
       edges {
         node {
           id
