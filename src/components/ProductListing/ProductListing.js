@@ -42,7 +42,7 @@ const queryListProducts = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 910, maxHeight: 910) {
+                fluid(maxWidth: 400, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
