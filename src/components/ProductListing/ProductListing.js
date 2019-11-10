@@ -21,7 +21,10 @@ export default ProductListing;
 
 const queryListProducts = graphql`
   query ProductListingQuery {
-    products: allShopifyProduct(sort: { fields: [publishedAt], order: ASC }) {
+    products: allShopifyProduct(
+      sort: { fields: [publishedAt], order: ASC }
+      filter: { tags: { eq: "popular" } }
+    ) {
       edges {
         node {
           id
@@ -39,7 +42,7 @@ const queryListProducts = graphql`
             id
             localFile {
               childImageSharp {
-                fluid(maxWidth: 910, maxHeight: 910) {
+                fluid(maxWidth: 400, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
