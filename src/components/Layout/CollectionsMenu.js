@@ -134,12 +134,16 @@ const CollectionsMenu = () => {
 };
 
 const RenderMenu = ({ collections }) => (
-  <Menu>
+  <Menu as="ul">
     {collections.map(collection => (
       <CollectionMenuItem key={collection.id} collection={collection} />
     ))}
   </Menu>
 );
+
+RenderMenu.propTypes = {
+  collections: PropTypes.array.isRequired
+};
 
 const CollectionMenuItem = ({ collection }) => {
   const hasChildren = collection.children && collection.children.length > 0;
