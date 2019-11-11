@@ -8,12 +8,15 @@ import ProductForm from './ProductForm';
 import { ProductSpecs } from './ProductDetails';
 
 const ProductPage = ({ product }) => {
-  const { title, description, descriptionHtml, images } = product;
+  const { title, description, descriptionHtml, images, reverse } = product;
 
   return (
-    <Flex>
-      <Flex width={1 / 2} justifyContent="center" alignItems="flex-start">
-        <Carousel width="400px">
+    <Flex
+      flexDirection={['column', 'column', reverse ? 'row-reverse' : 'row']}
+      alignItems="left"
+    >
+      <Box width={[1, 1, 1 / 2]} p={[0, 0, 3]}>
+      <Carousel>
           {images.map(image => (
             <Image
               key={image.id}
@@ -22,13 +25,14 @@ const ProductPage = ({ product }) => {
             />
           ))}
         </Carousel>
-      </Flex>
-      <Box width={1 / 2} px={4}>
+        </Box>
+        <Box width={[1, 1, 1 / 2]} p={3}>
         <ProductSpecs title={title} />
         <ProductForm id={product.id} variants={product.variants} />
         <ProductSpecs description={descriptionHtml} isHtml />
       </Box>
     </Flex>
+
   );
 };
 
