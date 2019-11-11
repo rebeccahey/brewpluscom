@@ -6,7 +6,7 @@ const AboutUsPage = () => (
   <>
   <SEO title="Tanks, hygienic fittings and brewing equipment" />
   <h1 css={{'@media (min-width: 100px)': {paddingLeft: "70px",
-              paddingRight: "70px"}}}>TEST About BrewPlus.com</h1>
+              paddingRight: "70px"}}}>About BrewPlus.com</h1>
   <p css={{'@media (min-width: 100px)': {paddingLeft: "70px",
               paddingRight: "70px"}}}>All our products are sourced and designed by an experienced brewer with decades of experience in one of the worlds most well respected micro breweries. <br /> <br />
               Have you been let down by the poor quality and high cost of the brewing equipment available on the market? We were too. <br /> <br />
