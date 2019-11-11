@@ -109,6 +109,7 @@ const CollectionsMenu = () => {
               uid
               data {
                 handle
+                path_component
                 title
                 parent {
                   document {

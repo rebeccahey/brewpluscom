@@ -27,6 +27,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
             uid
             data {
               handle
+              path_component
               parent {
                 document {
                   uid
@@ -92,7 +93,8 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
   const createCollectionsPages = (elements, root) => {
     elements.forEach(collection => {
-      const collectionPath = `${root}/${collection.uid}`;
+      const collectionPath = `${root}/${collection.data.path_component ||
+        collection.uid}`;
       createPage({
         path: collectionPath,
         component: collectionTemplate,
