@@ -8,6 +8,9 @@ const trimString = (string, limit) => {
   return string;
 };
 
+// TODO: Dummy deep copy implementation.
+const deepCopy = obj => JSON.parse(JSON.stringify(obj));
+
 const unflattenCollections = (array, parent) => {
   let tree = [];
   const aParent = typeof parent !== 'undefined' ? parent : { uid: null };
@@ -19,12 +22,14 @@ const unflattenCollections = (array, parent) => {
   );
 
   if (children.length !== 0) {
+    // Create a copy of children
+    const newChildren = deepCopy(children);
     if (aParent.uid === null) {
-      tree = children;
+      tree = newChildren;
     } else {
-      aParent.children = children;
+      aParent.children = newChildren;
     }
-    children.forEach(child => unflattenCollections(array, child));
+    newChildren.forEach(child => unflattenCollections(array, child));
   }
 
   return tree;
@@ -32,15 +37,17 @@ const unflattenCollections = (array, parent) => {
 
 const createCollectionsPaths = (array, root) =>
   array.map(collection => {
-    const collectionPath = `${root}/${collection.uid}`;
-    collection.linkURL = collectionPath;
-    if (collection.children && collection.children.length > 0) {
-      collection.children = createCollectionsPaths(
-        collection.children,
+    const newCollection = deepCopy(collection);
+    const collectionPath = `${root}/${newCollection.data.path_component ||
+      newCollection.uid}`;
+    newCollection.linkURL = collectionPath;
+    if (newCollection.children && newCollection.children.length > 0) {
+      newCollection.children = createCollectionsPaths(
+        newCollection.children,
         collectionPath
       );
     }
-    return collection;
+    return newCollection;
   });
 
 const fetchFeaturedCollections = array => {
