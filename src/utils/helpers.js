@@ -38,7 +38,8 @@ const unflattenCollections = (array, parent) => {
 const createCollectionsPaths = (array, root) =>
   array.map(collection => {
     const newCollection = deepCopy(collection);
-    const collectionPath = `${root}/${newCollection.uid}`;
+    const collectionPath = `${root}/${newCollection.data.path_component ||
+      newCollection.uid}`;
     newCollection.linkURL = collectionPath;
     if (newCollection.children && newCollection.children.length > 0) {
       newCollection.children = createCollectionsPaths(
