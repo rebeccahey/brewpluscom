@@ -149,7 +149,7 @@ class ProductForm extends Component {
       <StoreContext.Consumer>
         {({ addVariantToCart }) => (
           <form onSubmit={this.handleSubmit(addVariantToCart)} noValidate>
-            <Price>{this.priceForVariantId(variant)}</Price>
+            <Price><span>GBP</span>{this.priceForVariantId(variant)} </Price>
             <Errors show={errors.length}>
               <ErrorSign>
                 <MdErrorOutline />

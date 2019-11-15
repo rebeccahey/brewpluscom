@@ -137,7 +137,7 @@ const CartListItem = ({
       <Info>
         <Name>{item.title}</Name>
         <Meta>
-          {item.variant.title}, ${item.variant.price}
+           £{item.variant.price}
         </Meta>
       </Info>
       <Quantity
