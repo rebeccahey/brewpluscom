@@ -5,10 +5,11 @@ import Carousel from 'nuka-carousel';
 
 import { Flex, Box } from './shared/Elements';
 import ProductForm from './ProductForm';
-import { ProductSpecs } from './ProductDetails';
+// import { ProductSpecs } from './ProductDetails';
 
 const ProductPage = ({ product }) => {
-  const { title, description, descriptionHtml, images, reverse } = product;
+  // const { title, description, descriptionHtml, images, reverse } = product;
+  const { title, descriptionHtml, images, reverse } = product;
 
   return (
     <Flex
@@ -16,7 +17,7 @@ const ProductPage = ({ product }) => {
       alignItems="left"
     >
       <Box width={[1, 1, 1 / 2]} p={[0, 0, 3]}>
-      <Carousel>
+        <Carousel>
           {images.map(image => (
             <Image
               key={image.id}
@@ -25,14 +26,15 @@ const ProductPage = ({ product }) => {
             />
           ))}
         </Carousel>
-        </Box>
-        <Box width={[1, 1, 1 / 2]} p={3}>
-        <ProductSpecs title={title} />
+      </Box>
+      <Box width={[1, 1, 1 / 2]} p={3}>
+        <h1>{title}</h1>
+        {/* <ProductSpecs title={title} /> */}
         <ProductForm id={product.id} variants={product.variants} />
-        <ProductSpecs description={descriptionHtml} isHtml />
+        <div dangerouslySetInnerHTML={{ __html: descriptionHtml }} />
+        {/* <ProductSpecs description={descriptionHtml} isHtml /> */}
       </Box>
     </Flex>
-
   );
 };
 
