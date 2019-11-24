@@ -6,8 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Tanks, hygienic fittings and brewing equipment`,
     description: `High quality tanks, hygienic fittings and brewing equipment sourced by brewers for brewers.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://www.brewplus.com`
+    author: `@gatsbyjs`
   },
   plugins: [
     {
@@ -32,9 +31,6 @@ module.exports = {
         accessToken: process.env.SHOPIFY_ACCESS_TOKEN
       }
     },
-    {
-       resolve: `gatsby-plugin-sitemap`
-  },
     {
       resolve: `gatsby-source-prismic`,
       options: {
