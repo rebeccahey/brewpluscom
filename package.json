@@ -20,7 +20,7 @@
     "gatsby-plugin-sitemap": "^2.2.21",
     "gatsby-source-filesystem": "^2.1.31",
     "gatsby-source-instagram": "^0.5.1",
-    "gatsby-source-prismic": "^2.3.0-alpha.3",
+    "gatsby-source-prismic": "^2.3.0-previews.12",
     "gatsby-source-shopify": "^3.0.22",
     "gatsby-transformer-sharp": "^2.2.21",
     "nuka-carousel": "^4.5.12",
