@@ -3,6 +3,12 @@ require('dotenv').config({
 });
 
 module.exports = {
+siteMetadata: {
+siteUrl: `https://www.brewplus.com`,
+},
+plugins: [`gatsby-plugin-sitemap`],
+},
+module.exports = {
   siteMetadata: {
     title: `Tanks, hygienic fittings and brewing equipment`,
     description: `High quality tanks, hygienic fittings and brewing equipment sourced by brewers for brewers.`,
@@ -56,13 +62,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
       }
-    },
-    module.exports = {
-  siteMetadata: {
-    siteUrl: `https://www.brewplus.com`,
-  },
-  plugins: [`gatsby-plugin-sitemap`],
-}
+    }
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
