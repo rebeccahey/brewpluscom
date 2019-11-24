@@ -22,6 +22,7 @@
     "gatsby-source-prismic": "^2.3.0-previews.12",
     "gatsby-source-shopify": "^3.0.22",
     "gatsby-transformer-sharp": "^2.2.21",
+    "mem": "^6.0.0",
     "nuka-carousel": "^4.5.12",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
@@ -29,7 +30,8 @@
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "shopify-buy": "^2.8.0",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
