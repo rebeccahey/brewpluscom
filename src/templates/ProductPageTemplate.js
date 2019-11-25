@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import SEO from '../components/shared/SEO';
 
 import ProductPage from '../components/ProductPage';
 
@@ -9,7 +10,12 @@ const ProductPageTemplate = props => {
     data: { shopifyProduct: product }
   } = props;
 
-  return <ProductPage product={product} />;
+  return (
+    <>
+      <SEO title={product.title} description={product.description} />
+      <ProductPage product={product} />
+    </>
+  );
 };
 
 ProductPageTemplate.propTypes = {
