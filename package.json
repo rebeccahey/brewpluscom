@@ -19,7 +19,7 @@
     "gatsby-plugin-sharp": "^2.2.29",
     "gatsby-source-filesystem": "^2.1.31",
     "gatsby-source-instagram": "^0.5.1",
-    "gatsby-source-prismic": "^2.3.0-previews.12",
+    "gatsby-source-prismic": "^2.3.0-alpha.3",
     "gatsby-source-shopify": "^3.0.22",
     "gatsby-transformer-sharp": "^2.2.21",
     "mem": "^6.0.0",
