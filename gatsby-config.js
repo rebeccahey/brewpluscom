@@ -11,6 +11,13 @@ module.exports = {
   },
   plugins: [
     {
+  resolve: `gatsby-plugin-google-analytics`,
+  options: {
+    trackingId: "UA-152686075-1",
+    head: false,
+  },
+},
+    {
       resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/components/Layout`)
