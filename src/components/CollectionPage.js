@@ -15,7 +15,7 @@ const ImageWrapper = styled(Box)`
 const CollectionPage = ({ prismicCollection, shopifyCollection }) => {
   const { products } = shopifyCollection;
   const {
-    data: { title, subtitle, image }
+    data: { title, subtitle, overview, image }
   } = prismicCollection;
 
   return (
@@ -31,6 +31,7 @@ const CollectionPage = ({ prismicCollection, shopifyCollection }) => {
         <Text as="p" color="text" textAlign="center">
           {subtitle}
         </Text>
+        <div dangerouslySetInnerHTML={{ __html: overview.html }} />
       </Box>
       <Flex flexWrap="wrap">
         {products.map(product => (

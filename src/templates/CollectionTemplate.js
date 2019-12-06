@@ -29,6 +29,9 @@ export const query = graphql`
         handle
         title
         subtitle
+        overview {
+          html
+        }
         image {
           alt
           localFile {
