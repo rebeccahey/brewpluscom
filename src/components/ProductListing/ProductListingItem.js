@@ -66,7 +66,7 @@ const Preview = styled(`div`)`
   }
 `;
 
-const Name = styled(`h1`)`
+const Name = styled(`h4`)`
   color: ${props => props.theme.colors.brand};
   font-size: ${props => props.theme.fontSizes[3]};
   margin: 0;
