@@ -10,9 +10,23 @@ const ProductPageTemplate = props => {
     data: { shopifyProduct: product }
   } = props;
 
+  // Extract SEO meta fields
+  const seo = {};
+  if (product.metafields.length) {
+    const seoMetafields = product.metafields.filter(
+      field => field.namespace === 'seo'
+    );
+    seoMetafields.forEach(field => {
+      seo[field.key] = field.value;
+    });
+  }
+
   return (
     <>
-      <SEO title={product.title} description={product.description} />
+      <SEO
+        title={seo.title || product.title}
+        description={seo.description || product.description}
+      />
       <ProductPage product={product} />
     </>
   );
@@ -35,6 +49,11 @@ export const query = graphql`
       description
       descriptionHtml
       productType
+      metafields {
+        key
+        value
+        namespace
+      }
       variants {
         shopifyId
         title
