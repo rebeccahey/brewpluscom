@@ -3,15 +3,24 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import CollectionPage from '../components/CollectionPage';
+import SEO from '../components/shared/SEO';
 
 const CollectionPage2Template = ({ data }) => {
   const { prismicCollection, shopifyCollection } = data;
 
+  const {
+    seo_title: seoTitle,
+    seo_description: seoDescription
+  } = prismicCollection.data;
+
   return (
-    <CollectionPage
-      prismicCollection={prismicCollection}
-      shopifyCollection={shopifyCollection}
-    />
+    <>
+      <SEO title={seoTitle} description={seoDescription} />
+      <CollectionPage
+        prismicCollection={prismicCollection}
+        shopifyCollection={shopifyCollection}
+      />
+    </>
   );
 };
 
@@ -26,6 +35,8 @@ export const query = graphql`
     prismicCollection(uid: { eq: $uid }) {
       id
       data {
+        seo_title
+        seo_description
         handle
         title
         subtitle
