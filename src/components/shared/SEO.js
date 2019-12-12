@@ -25,6 +25,7 @@ function SEO({ description, lang, meta, title, titleTemplateFn }) {
     `
   );
 
+  const metaTitle = title || site.siteMetadata.title;
   const metaDescription = description || site.siteMetadata.description;
 
   return (
@@ -32,7 +33,7 @@ function SEO({ description, lang, meta, title, titleTemplateFn }) {
       htmlAttributes={{
         lang
       }}
-      title={title}
+      title={metaTitle}
       // titleTemplate={`%s | ${site.siteMetadata.title}`}
       titleTemplate={titleTemplateFn(' | Brewplus.com')}
       meta={[
