@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Tanks, hygienic fittings and brewing equipment`,
-    description: `High quality tanks, hygienic fittings and brewing equipment sourced by brewers for brewers.`,
+    description: `BrewPlus offers a range of brewing equipment for commercial micro breweries. We offer complete brewing systems, stainless steel pipework fittings, pumps and valves.`,
     author: `@gatsbyjs`,
     siteUrl: `https://www.brewplus.com`
   },
