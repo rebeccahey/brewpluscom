@@ -7,7 +7,7 @@ import FeaturedCollections from '../components/FeaturedCollections';
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Brewing Equipment, Systems, Tanks & Fittings" />
     <FeaturedCollections />
     <ProductListing />
     <LatestBlogposts />
